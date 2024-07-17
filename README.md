@@ -1,25 +1,22 @@
 # Global Waves - Audio Player
 
+Global waves is a project that has similar functionality to Spotify. It simulates different commands made by users within an audio file application.Thus, at any given moment in time several users can interact with the application and be managed by an admin.
+
 #### Contributor: Dumitrașcu Filip-Teodor
-
-## Project description
-
-   Global waves is a project that has similar functionality to Spotify. It simulates different commands made by users within an audio file application.Thus, at any given moment in time several users can interact with the application and be managed by an admin.
-
 
 ## Project structure
 
 ### src/
 
 #### checker/ 
-    checker files
+checker files
     
 #### fileio.input/
-    contains classes used to read data from the json files
+contains classes used to read data from the json files
     
 #### main/
-    Main - runs the specific command in every test.
-    Test - runs only a part of tests.
+Main - runs the specific command in every test.
+Test - runs only a part of tests.
 
 #### app - the implementation:
     
