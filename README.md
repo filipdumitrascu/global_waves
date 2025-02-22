@@ -1,45 +1,37 @@
 # Global Waves - Audio Player
 
-Global waves is a project that has similar functionality to Spotify. It simulates different commands made by users within an audio file application.Thus, at any given moment in time several users can interact with the application and be managed by an admin.
+Global Waves is an audio player project with functionality similar to Spotify. It simulates various user interactions within an audio application. Multiple users can interact with the app simultaneously, with an admin managing their activities.
 
 #### Contributor: Dumitrașcu Filip-Teodor
 
-## Project structure
+## Project Structure
 
-### src/
+### **src/**
+This directory contains the core implementation of the project.
 
-#### checker/ 
-checker files
-    
-#### fileio.input/
-contains classes used to read data from the json files
-    
-#### main/
-Main - runs the specific command in every test.
-Test - runs only a part of tests.
+#### **checker/**
+Contains checker files used for validation.
 
-#### app - the implementation:
-    
-    audio/ - where all the audio files are stored.
-    data/ - where non audio entities are stored (which entities can be
-            found here depends on the user type). 
-    pages/ - the page system implemented with the visitor design pattern
-            so the current page object calls the exact print page method
-            according to its object type.
-    player/ - the loader of audio files where can be performed
-            listening commands.
-    searchBar/ - filter-based search mechanism now extended with the option
-                to search pages and load entities from them in players.
-    user/ - knowing that every user has some attributes in common,
-            UserEntry class stores and extends them to other user types.
-            Each user stores entities and modifies them along the way.
-            They are visible on each one's page and the normal user can
-            load artist's and host's entities in their player.
-    utils/
-    * Admin - a singleton design pattern is used for an instance that
-            stores the entire application database and calculates
-            statistics according to changes that occur along the way.
-    * CommandRunner - calls the specific method for every command and
-                    returns in an object node the output for the command.
+#### **fileio.input/**
+Includes classes responsible for reading data from JSON files.
 
-#### input/ - contains the tests and library in JSON format
+#### **main/**
+- **Main**: Executes all commands in every test.
+- **Test**: Runs only a subset of the tests.
+
+#### **app/** - Core implementation:
+- **audio/**: Stores all audio files.
+- **data/**: Stores non-audio entities (varies based on user type).
+- **pages/**: Implements a page system using the **Visitor Design Pattern**. The current page object calls the appropriate print method based on its type.
+- **player/**: The audio file loader where listening commands can be executed.
+- **searchBar/**: A filter-based search mechanism extended with the ability to search pages and load entities into players.
+- **user/**: 
+  - **UserEntry** class stores common attributes shared across all user types.
+  - Users can store, modify, and interact with entities visible on their pages.
+  - Normal users can load artist and host entities into their player.
+- **utils/**:
+  - **Admin**: Implements a **Singleton Design Pattern** to manage the entire application database and compute statistics based on system changes.
+  - **CommandRunner**: Calls the appropriate method for each command and returns the output as an object node.
+
+#### **input/**
+Contains test cases and a library in JSON format.
